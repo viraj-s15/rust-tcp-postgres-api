@@ -1,5 +1,5 @@
 use postgres::{Client, NoTls};
-use posgres::Error as PostgresError;
+use postgres::Error as PostgresError;
 use std:net:{TcpListener, TcpStream};
 use std::io::{Read, Write};
 use std::env;
@@ -10,7 +10,7 @@ extern crate serde_derive;
 
 #[derive(Serialize, Deserialize)]
 struct User {
-    od: Option<i32>,
+    id: Option<i32>,
     name: String,
     email: String
 }
@@ -28,8 +28,8 @@ fn main() {
         return;
     }
 
-    let listener = TcpListener::bind(format!("0.0.0.0:800")).unwrap();
-    println!("Server started at port 800...");
+    let listener = TcpListener::bind(format!("0.0.0.0:8000")).unwrap();
+    println!("Server started at port 8000...");
 
 
     for stream in listener.incoming() {
@@ -171,8 +171,8 @@ fn set_db() -> Result<(), PostgresError> {
             name VARCHAR NOT NULL,
             email VARCHAR NOT NULL
         )"
-        Ok(())
     )?;
+    Ok(())
 }
 
 

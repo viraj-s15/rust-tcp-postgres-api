@@ -22,3 +22,4 @@ Run the entire service
 
 `docker compose up rustapp`
 
+Dont forget to add your own image

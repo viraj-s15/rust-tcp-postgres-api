@@ -2,8 +2,9 @@ version: '3.9'
 
 services:
   rustapp:
+    # add your own container here
     container_name: rustapp
-    image: veer15/rustapp:1.0.0
+      # image: veer15/rustapp:1.0.0
     build:
       context: .
       dockerfile: Dockerfile

@@ -17,6 +17,6 @@ RUN cargo build --release
 
 WORKDIR /usr/local/bin
 
-COPY --from=builder /app/target/relase/rust-docker-crud-api .
+COPY --from=builder /app/target/release/rust-docker-crud-api .
 
 CMD ["./rust-docker-crud-api"]

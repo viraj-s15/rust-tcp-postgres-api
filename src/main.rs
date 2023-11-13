@@ -20,6 +20,7 @@ const DB_URL: &str =  env!("DB_URL");
 const OK_RES: &str = "HTTP/1.1 200 OK\r\n\ContentType: application/json\r\n\r\n";
 const NOT_FOUND: &str = "HTTP/1.1 404 NOT FOUND\r\n\r\n";
 const INTERNAL_SERVER_ERROR: &str = "HTTP/1.1 500 INTERNAL SERVER ERROR\r\n\r\n"
+const OTHER: &str = "HTTP/1.1 SOMETHING HAS GONE WRONG\r\n\r\n"
 
 fn main() {
  
